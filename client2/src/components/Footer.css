@@ -1,0 +1,30 @@
+.container3{
+   height: 100px;
+   background-color: #4e916a;
+   width: 100%;
+   margin-top: 100px;
+   padding-top: 20px;
+    /* position: fixed; */
+    position:static;
+    bottom: 0;
+}
+
+.container3 h4{
+    margin-left: 42%;
+    font-size: 20px;
+    color: white;
+    margin-top: 20px;
+}
+
+@media(max-width:500px) {
+
+
+    .container3{
+        width: 100%;
+        align-items: baseline;
+    }
+
+    .container3 h4{
+        margin-left: 28%;
+    }
+}

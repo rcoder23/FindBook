@@ -1,0 +1,107 @@
+.Addform{
+    /* background-color: red; */
+    margin-left: -10px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 80%;
+   margin-left: 140px;
+}
+
+
+.Addform .title{
+     color: #6ec994;
+        
+    /* color: black; */
+    font-size:80px;
+    font-family: 'Caveat', cursive;
+}
+
+.Addform .formc{
+    margin-left: 120px;
+    /* background-color: aqua; */
+    width: 80%;
+    margin-left: 100px;
+ 
+    /* align-items: flex-end; */
+ }
+
+
+
+.Addform .formc input[type='text']{
+   height: 40px;
+   width: 80%;
+   /* // eslint-disable-next-line */
+   display: flex;
+   font-size:20px;
+   justify-content: flex-start;
+   padding-left: 10px;
+   border-radius: 5px;
+}
+
+.Addform .formc input[type='text']:focus{
+  outline-color: #4e916a;
+}
+
+
+.Addform .formc label{
+   font-size:20px;
+   color:#7187a3;
+    
+ }
+ 
+
+ .Addform .formc button{
+    background-color: red;
+    background-color: #6ec994;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    height: 60px;
+    width: 170px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+   margin-left: -25px;
+ }
+ 
+
+ .Addform .formc button:hover{
+    background-color: #4e916a;
+    cursor: pointer;
+}
+ 
+
+@media(max-width:500px) {
+
+   .Addform{
+      /* background-color:bisque; */
+      margin-left: 50px;
+      margin-top: -100px;
+      width: 200px;
+   }
+   .Addform .title{
+      font-size:30px;
+      margin-left: 60px;
+     
+   
+      /* margin-left: -10px; */
+   }
+   
+
+   .Addform .formc{
+      /* background-color: red; */
+    width: 300px;
+      /* margin-left:-200px; */
+
+   }
+
+   .Addform .formc input[type='text']{
+     
+      width: 100%;
+      
+   }
+   
+   
+}
