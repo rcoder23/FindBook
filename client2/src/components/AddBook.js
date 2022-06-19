@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React,{useState} from 'react'
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import './AddBook.css';
 export const AddBook = () => {
@@ -15,8 +16,28 @@ export const AddBook = () => {
     //to add
 
     axios.post("http://localhost:5000/api/book/add",note)
-    .then(res=>console.log(res))
-    .catch(err=>console.log(err));
+    .then(res=>{
+      toast.success('🦄 Added Successfully', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
+    })
+    .catch(err=>{
+      toast.error('error ', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
+    });
     console.log(note);
     setNote({bookname:"" ,class:"",publication:"",oprice:"",eprice:"",address:"",wnum:""});
   }
@@ -27,6 +48,18 @@ export const AddBook = () => {
 
   return (
     <>
+        
+        <ToastContainer
+position="top-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+/>
         <section className="Addform">
             <div className="title">
               <h4>Add Books</h4>

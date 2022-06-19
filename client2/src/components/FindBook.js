@@ -1,6 +1,9 @@
 import axios from 'axios';
 import React,{useState} from 'react'
 
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './FindBook.css';
 
 export const FindBook = () => {
@@ -83,6 +86,18 @@ const submitt=async(e)=>{
       // setNoteu(response);
       console.log(response.data[0]);
       list.length=0;
+  
+
+        toast.success('🦄 We are finding book for you ', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          });
+  
       for(let i=0;i<response.data.length;i++){
         // setlist(list.push(response.data[i].bookname));
         const newList = list.concat(response.data[i]);
@@ -94,7 +109,15 @@ const submitt=async(e)=>{
       console.log(list);
     })
     .catch(function (error){
-      console.log(error);
+      toast.error('🦄 Wow so easy!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
     })
  
     
@@ -104,6 +127,19 @@ const submitt=async(e)=>{
   
   return (
       <>
+
+        
+<ToastContainer
+position="top-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+/>
       
         <section className="find">
             <div className="search">
